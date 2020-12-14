@@ -12,7 +12,6 @@
                     <div class="col-8 offset-2">
                         <h4>Example:</h4>
                         <pre><code class="html">&lt;vue-csv-import
-    v-slot="{file}"
     v-model="csv"
     :fields="{name: {required: false, label: 'Name'}, age: {required: true, label: 'Age'}}"
 &gt;
