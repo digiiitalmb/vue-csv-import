@@ -5,11 +5,9 @@
 [![CircleCI](https://circleci.com/gh/jgile/vue-csv-import.svg?style=svg)](https://circleci.com/gh/jgile/vue-csv-import)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jgile/vue-csv-import/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jgile/vue-csv-import/?branch=master)
 
-This version is for Vue 3. [Click here for Vue2](https://github.com/jgile/vue-csv-import/tree/vue2).
+This version is for Vue 3. [Click here for Vue 2](https://github.com/jgile/vue-csv-import/tree/vue2).
 
----
-
-## Demo
+VueCsvImport is completely un-styled and customizable. All markup can be replaced and all text can be customized.
 
 [Demo](https://jgile.github.io/vue-csv-import/)
 

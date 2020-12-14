@@ -9,7 +9,7 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --target lib --name vue-csv-import ./src/index.js --dest ./dist && rm ./dist/demo.html",
-        "build-demo": "vue-cli-service build --dest ./docs",
+        "build:demo": "vue-cli-service build --mode dev --public-path '/vue-csv-import' --dest ./demo",
         "test": "vue-cli-service test:unit"
     },
     "dependencies": {

@@ -1,10 +1,10 @@
 <template>
     <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png"/>
+        <img alt="Vue logo" src="assets/logo.png"/>
         <div class="container">
             <div class="row mt-5 text-center">
                 <div class="col-6 offset-3">
-                    <a href="/src/assets/csv-sample.csv" target="_blank">Example CSV</a>
+                    <a href="assets/csv-sample.csv" target="_blank">Example CSV</a>
                 </div>
             </div>
             <section class="py-5">
