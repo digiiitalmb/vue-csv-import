@@ -15,24 +15,28 @@
                         </label>
                     </slot>
                 </div>
-                <div class="form-group csv-import-file test2">
+                <div class="form-group csv-import-file">
 
-                    <slot name="file" :csv="csv" :inputClass="inputClass" :validFileMimeType="validFileMimeType">
-                    <input
-                        ref="csv"
+                    
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                      </div>
+                      <div class="custom-file">
+                        <input ref="csv"
                         type="file"
                         @change.prevent="validFileMimeType"
-                        :class="inputClass"
-                        name="csv"
-                    />
-                    </slot> 
-                    
+                        class="custom-file-input"
+                        name="csv">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                      </div>
+                    </div>
+
                     <slot name="error" v-if="showErrorMessage">
                         <div class="invalid-feedback d-block">
                             File type is invalid
                         </div>
                     </slot>
-
                 </div>
                 <div class="form-group">
                     <slot name="next" :load="load">
@@ -53,7 +57,6 @@
                                 </tr>
                             </thead>
                         </slot>
-                        <slot name="tbody">
                         <tbody>
                             <tr v-for="(field, key) in fieldsToMap" :key="key">
                                 <td>{{ field.label }}</td>
@@ -71,7 +74,6 @@
                                 </td>
                             </tr>
                         </tbody>
-                        </slot>  
                     </table>
                     <div class="form-group" v-if="url">
                         <slot name="submit" :submit="submit">
@@ -243,12 +245,7 @@ export default {
             });
         },
         validFileMimeType() {
-
-            console.log(this.$refs.csv);
-            
             let file = this.$refs.csv.files[0];
-
-
             const mimeType = file.type === "" ? mimeTypes.lookup(file.name) : file.type;
 
             if (file) {
