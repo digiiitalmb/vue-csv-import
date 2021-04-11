@@ -243,7 +243,12 @@ export default {
             });
         },
         validFileMimeType() {
+
+            console.log(this.$refs.csv);
+            
             let file = this.$refs.csv.files[0];
+
+
             const mimeType = file.type === "" ? mimeTypes.lookup(file.name) : file.type;
 
             if (file) {
