@@ -26,7 +26,7 @@
                         <input ref="csv"
                         type="file"
                         @change.prevent="validFileMimeType"
-                        class="custom-file-input"
+                        class="custom-file-input file-select"
                         name="csv">
                         <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                       </div>
