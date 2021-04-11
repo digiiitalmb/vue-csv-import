@@ -4,6 +4,13 @@
     "private": false,
     "description": "Vue.js component to handle CSV uploads with field mapping.",
     "author": "John Gile",
+    "scripts": {
+        "serve": "vue-cli-service serve ./demo/main",
+        "build": "vue-cli-service build --target lib --name VueCsvImport src/index.js",
+        "test:unit": "vue-cli-service test:unit",
+        "lint": "vue-cli-service lint",
+        "build:demo": "vue-cli-service --mode development build --dest ./dist/demo ./demo/main"
+    },
     "main": "dist/VueCsvImport.umd.js",
     "browser": "dist/VueCsvImport.common.js",
     "jsDelivr": "dist/VueCsvImport.umd.min.js",
