@@ -17,7 +17,7 @@
                 </div>
                 <div class="form-group csv-import-file test2">
 
-                    <slot name="file">
+                    <slot name="file" :csv="csv" :inputClass="inputClass" :validFileMimeType="validFileMimeType">
                     <input
                         ref="csv"
                         type="file"
@@ -25,7 +25,7 @@
                         :class="inputClass"
                         name="csv"
                     />
-                    </slot>
+                    </slot> 
                     
                     <slot name="error" v-if="showErrorMessage">
                         <div class="invalid-feedback d-block">
