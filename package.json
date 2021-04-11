@@ -10,7 +10,6 @@
         "test:unit": "vue-cli-service test:unit",
         "lint": "vue-cli-service lint",
         "build:demo": "vue-cli-service --mode development build --dest ./dist/demo ./demo/main",
-        "postinstall": "node "
     },
     "main": "dist/VueCsvImport.umd.js",
     "browser": "dist/VueCsvImport.common.js",
