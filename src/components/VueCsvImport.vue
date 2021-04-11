@@ -15,7 +15,7 @@
                         </label>
                     </slot>
                 </div>
-                <div class="form-group csv-import-file">
+                <div class="form-group csv-import-file test2">
                     <input
                         ref="csv"
                         type="file"
