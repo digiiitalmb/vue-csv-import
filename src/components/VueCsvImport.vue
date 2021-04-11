@@ -23,6 +23,9 @@
                         :class="inputClass"
                         name="csv"
                     />
+                    file
+
+                    
                     <slot name="error" v-if="showErrorMessage">
                         <div class="invalid-feedback d-block">
                             File type is invalid
