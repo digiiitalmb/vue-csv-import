@@ -16,6 +16,8 @@
                     </slot>
                 </div>
                 <div class="form-group csv-import-file test2">
+
+                    <slot name="file">
                     <input
                         ref="csv"
                         type="file"
@@ -23,14 +25,14 @@
                         :class="inputClass"
                         name="csv"
                     />
-                    file
-
+                    </slot>
                     
                     <slot name="error" v-if="showErrorMessage">
                         <div class="invalid-feedback d-block">
                             File type is invalid
                         </div>
                     </slot>
+
                 </div>
                 <div class="form-group">
                     <slot name="next" :load="load">
@@ -51,6 +53,7 @@
                                 </tr>
                             </thead>
                         </slot>
+                        <slot name="tbody">
                         <tbody>
                             <tr v-for="(field, key) in fieldsToMap" :key="key">
                                 <td>{{ field.label }}</td>
@@ -68,6 +71,7 @@
                                 </td>
                             </tr>
                         </tbody>
+                        </slot>  
                     </table>
                     <div class="form-group" v-if="url">
                         <slot name="submit" :submit="submit">
