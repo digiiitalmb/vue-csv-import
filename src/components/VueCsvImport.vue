@@ -15,20 +15,28 @@
                         </label>
                     </slot>
                 </div>
+
+                <div class="card card-default">
+                    <div class="card-body">
+                               
+                    </div>
+                </div>
+
                 <div class="form-group csv-import-file">
 
                     
                     <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                      </div>
                       <div class="custom-file">
                         <input ref="csv"
                         type="file"
                         @change.prevent="validFileMimeType"
                         class="custom-file-input file-select"
                         name="csv">
-                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        <slot name="next" :load="load">
+                        <button type="submit" :disabled="disabledNextButton" :class="buttonClass" @click.prevent="load">
+                            {{ loadBtnText }}
+                        </button>
+                        </slot>
                       </div>
                     </div>
 
@@ -38,13 +46,12 @@
                         </div>
                     </slot>
                 </div>
+
                 <div class="form-group">
-                    <slot name="next" :load="load">
-                        <button type="submit" :disabled="disabledNextButton" :class="buttonClass" @click.prevent="load">
-                            {{ loadBtnText }}
-                        </button>
-                    </slot>
+                  
                 </div>
+
+
             </div>
             <div class="vue-csv-uploader-part-two">
                 <div class="vue-csv-mapping" v-if="sample">
