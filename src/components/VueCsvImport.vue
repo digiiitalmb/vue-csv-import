@@ -25,26 +25,40 @@
                 <div class="form-group csv-import-file">
 
                     
-                    <div class="input-group mb-3">
-                      <div class="custom-file">
-                        <input ref="csv"
-                        type="file"
-                        @change.prevent="validFileMimeType"
-                        class="custom-file-input file-select"
-                        name="csv">
-                        <slot name="next" :load="load">
-                        <button type="submit" :disabled="disabledNextButton" :class="buttonClass" @click.prevent="load">
-                            {{ loadBtnText }}
-                        </button>
-                        </slot>
-                      </div>
+                    <div class="card card-default">
+                        <div class="card-body">
+
+                            <div class="form-group row mb-0">
+                                <label class="col-md-4 col-form-label text-md-right">{{__('CSV File')}}</label>
+
+                                <div class="col-md-6">
+                                    <div class="input-group mb-0">
+
+                                          <div class="custom-file">
+                                            
+                                            <label class="custom-file-label form-control" for="inputGroupFile01">Choose file</label>
+                                            <input type="file" class="custom-file-input form-control" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" ref="csv"
+                                            type="file"
+                                            @change.prevent="validFileMimeType"
+                                            class="custom-file-input file-select"
+                                            name="csv">
+                                           
+                                          </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <slot name="error" v-if="showErrorMessage">
+                                <div class="invalid-feedback d-block">
+                                    File type is invalid
+                                </div>
+                            </slot>
+
+                        </div>
                     </div>
 
-                    <slot name="error" v-if="showErrorMessage">
-                        <div class="invalid-feedback d-block">
-                            File type is invalid
-                        </div>
-                    </slot>
+                 
                 </div>
 
                 <div class="form-group">
@@ -256,8 +270,11 @@ export default {
             const mimeType = file.type === "" ? mimeTypes.lookup(file.name) : file.type;
 
             if (file) {
+
                 this.fileSelected = true;
                 this.isValidFileMimeType = this.validation ? this.validateMimeType(mimeType) : true;
+                this.load();
+ 
             } else {
                 this.isValidFileMimeType = !this.validation;
                 this.fileSelected = false;
