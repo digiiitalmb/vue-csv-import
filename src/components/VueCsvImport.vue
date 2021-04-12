@@ -29,7 +29,7 @@
                         <div class="card-body">
 
                             <div class="form-group row mb-0">
-                                <label class="col-md-4 col-form-label text-md-right">{{__('CSV File')}}</label>
+                                <label class="col-md-4 col-form-label text-md-right">CSV File</label>
 
                                 <div class="col-md-6">
                                     <div class="input-group mb-0">
@@ -273,7 +273,7 @@ export default {
 
                 this.fileSelected = true;
                 this.isValidFileMimeType = this.validation ? this.validateMimeType(mimeType) : true;
-                //this.load();
+                this.load();
  
             } else {
                 this.isValidFileMimeType = !this.validation;
