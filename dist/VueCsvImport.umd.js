@@ -5642,12 +5642,12 @@ function _typeof(obj) {
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d556c88-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueCsvImport.vue?vue&type=template&id=306cf246&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-csv-uploader"},[_c('div',{staticClass:"form"},[_c('div',{staticClass:"vue-csv-uploader-part-one"},[(_vm.headers === null)?_c('div',{staticClass:"form-check form-group csv-import-checkbox"},[_vm._t("hasHeaders",[_c('input',{class:_vm.checkboxClass,attrs:{"type":"checkbox","id":_vm.makeId('hasHeaders')},domProps:{"value":_vm.hasHeaders},on:{"change":_vm.toggleHasHeaders}}),_c('label',{staticClass:"form-check-label",attrs:{"for":_vm.makeId('hasHeaders')}},[_vm._v(" File Has Headers ")])],{"headers":_vm.hasHeaders,"toggle":_vm.toggleHasHeaders})],2):_vm._e(),_vm._m(0),_c('div',{staticClass:"form-group csv-import-file"},[_c('div',{staticClass:"card card-default"},[_c('div',{staticClass:"card-body"},[_c('div',{staticClass:"form-group row mb-0"},[_c('label',{staticClass:"col-md-4 col-form-label text-md-right"},[_vm._v("CSV File")]),_c('div',{staticClass:"col-md-6"},[_c('div',{staticClass:"input-group mb-0"},[_c('div',{staticClass:"custom-file"},[_c('label',{staticClass:"custom-file-label form-control",attrs:{"for":"inputGroupFile01"}},[_vm._v("Choose file")]),_c('input',{ref:"csv",staticClass:"custom-file-input file-select",attrs:{"type":"file","id":"inputGroupFile01","aria-describedby":"inputGroupFileAddon01","type":"file","class":"custom-file-input file-select","name":"csv"},on:{"change":function($event){$event.preventDefault();return _vm.validFileMimeType($event)}}})])])])]),(_vm.showErrorMessage)?_vm._t("error",[_c('div',{staticClass:"invalid-feedback d-block"},[_vm._v(" File type is invalid ")])]):_vm._e()],2)])]),_c('div',{staticClass:"form-group"})]),_c('div',{staticClass:"vue-csv-uploader-part-two"},[(_vm.sample)?_c('div',{staticClass:"vue-csv-mapping"},[_c('table',{class:_vm.tableClass},[_vm._t("thead",[_vm._m(1)]),_c('tbody',_vm._l((_vm.fieldsToMap),function(field,key){return _c('tr',{key:key},[_c('td',[_vm._v(_vm._s(field.label))]),_c('td',[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.map[field.key]),expression:"map[field.key]"}],class:_vm.tableSelectClass,attrs:{"name":("csv_uploader_map_" + key)},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.map, field.key, $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[(_vm.canIgnore)?_c('option',{domProps:{"value":null}},[_vm._v("Ignore")]):_vm._e(),_vm._l((_vm.firstRow),function(column,key){return _c('option',{key:key,domProps:{"value":key}},[_vm._v(" "+_vm._s(column)+" ")])})],2)])])}),0)],2),(_vm.url)?_c('div',{staticClass:"form-group"},[_vm._t("submit",[_c('input',{class:_vm.buttonClass,attrs:{"type":"submit"},domProps:{"value":_vm.submitBtnText},on:{"click":function($event){$event.preventDefault();return _vm.submit($event)}}})],{"submit":_vm.submit})],2):_vm._e()]):_vm._e()])])])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card card-default"},[_c('div',{staticClass:"card-body"})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('th',[_vm._v("Field")]),_c('th',[_vm._v("CSV Column")])])])}]
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5d556c88-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueCsvImport.vue?vue&type=template&id=611e852c&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-csv-uploader"},[_c('div',{staticClass:"form"},[_c('div',{staticClass:"vue-csv-uploader-part-one"},[(_vm.headers === null)?_c('div',{staticClass:"form-check form-group csv-import-checkbox"},[_vm._t("hasHeaders",[_c('input',{class:_vm.checkboxClass,attrs:{"type":"checkbox","id":_vm.makeId('hasHeaders')},domProps:{"value":_vm.hasHeaders},on:{"change":_vm.toggleHasHeaders}}),_c('label',{staticClass:"form-check-label",attrs:{"for":_vm.makeId('hasHeaders')}},[_vm._v(" File Has Headers ")])],{"headers":_vm.hasHeaders,"toggle":_vm.toggleHasHeaders})],2):_vm._e(),_c('div',{staticClass:"card card-default"},[_c('div',{staticClass:"card-body"},[_c('div',{staticClass:"form-group row mb-0"},[_c('label',{staticClass:"col-md-4 col-form-label text-md-right"},[_vm._v("CSV File")]),_c('div',{staticClass:"col-md-6"},[_c('div',{staticClass:"input-group mb-0"},[_c('div',{staticClass:"custom-file csv-import-file"},[_c('label',{staticClass:"custom-file-label form-control",attrs:{"for":"inputGroupFile01"}},[_vm._v("Choose file")]),_c('input',{ref:"csv",staticClass:"custom-file-input file-select",attrs:{"type":"file","id":"inputGroupFile01","aria-describedby":"inputGroupFileAddon01","name":"csv"},on:{"change":function($event){$event.preventDefault();return _vm.validFileMimeType($event)}}})])])])]),(_vm.showErrorMessage)?_vm._t("error",[_c('div',{staticClass:"invalid-feedback d-block"},[_vm._v(" File type is invalid ")])]):_vm._e()],2)]),_c('div',{staticClass:"form-group"},[_vm._t("next",[_c('button',{class:_vm.buttonClass,attrs:{"type":"submit","disabled":_vm.disabledNextButton},on:{"click":function($event){$event.preventDefault();return _vm.load($event)}}},[_vm._v(" "+_vm._s(_vm.loadBtnText)+" ")])],{"load":_vm.load})],2)]),_c('div',{staticClass:"vue-csv-uploader-part-two"},[(_vm.sample)?_c('div',{staticClass:"vue-csv-mapping"},[_c('table',{class:_vm.tableClass},[_vm._t("thead",[_vm._m(0)]),_c('tbody',_vm._l((_vm.fieldsToMap),function(field,key){return _c('tr',{key:key},[_c('td',[_vm._v(_vm._s(field.label))]),_c('td',[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.map[field.key]),expression:"map[field.key]"}],class:_vm.tableSelectClass,attrs:{"name":("csv_uploader_map_" + key)},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.$set(_vm.map, field.key, $event.target.multiple ? $$selectedVal : $$selectedVal[0])}}},[(_vm.canIgnore)?_c('option',{domProps:{"value":null}},[_vm._v("Ignore")]):_vm._e(),_vm._l((_vm.firstRow),function(column,key){return _c('option',{key:key,domProps:{"value":key}},[_vm._v(" "+_vm._s(column)+" ")])})],2)])])}),0)],2),(_vm.url)?_c('div',{staticClass:"form-group"},[_vm._t("submit",[_c('input',{class:_vm.buttonClass,attrs:{"type":"submit"},domProps:{"value":_vm.submitBtnText},on:{"click":function($event){$event.preventDefault();return _vm.submit($event)}}})],{"submit":_vm.submit})],2):_vm._e()]):_vm._e()])])])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('th',[_vm._v("Field")]),_c('th',[_vm._v("CSV Column")])])])}]
 
 
-// CONCATENATED MODULE: ./src/components/VueCsvImport.vue?vue&type=template&id=306cf246&
+// CONCATENATED MODULE: ./src/components/VueCsvImport.vue?vue&type=template&id=611e852c&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
 var es_array_concat = __webpack_require__("99af");
@@ -5705,9 +5705,6 @@ var mime_types_default = /*#__PURE__*/__webpack_require__.n(mime_types);
 
 
 
-//
-//
-//
 //
 //
 //
@@ -5975,7 +5972,9 @@ var mime_types_default = /*#__PURE__*/__webpack_require__.n(mime_types);
 
       if (file) {
         this.fileSelected = true;
-        this.isValidFileMimeType = this.validation ? this.validateMimeType(mimeType) : true; //this.load();
+        this.isValidFileMimeType = this.validation ? this.validateMimeType(mimeType) : true;
+        this.load();
+        console.log('attempt load');
       } else {
         this.isValidFileMimeType = !this.validation;
         this.fileSelected = false;
@@ -5987,6 +5986,7 @@ var mime_types_default = /*#__PURE__*/__webpack_require__.n(mime_types);
     load: function load() {
       var _this = this;
 
+      console.log('log');
       this.readFile(function (output) {
         _this.sample = Object(external_commonjs_lodash_commonjs2_lodash_root_["get"])(external_commonjs_papaparse_commonjs2_papaparse_root_papaparse_default.a.parse(output, {
           preview: 2,

@@ -2,6 +2,8 @@
     <div class="vue-csv-uploader">
         <div class="form">
             <div class="vue-csv-uploader-part-one">
+
+
                 <div class="form-check form-group csv-import-checkbox" v-if="headers === null">
                     <slot name="hasHeaders" :headers="hasHeaders" :toggle="toggleHasHeaders">
                         <input
@@ -16,16 +18,8 @@
                     </slot>
                 </div>
 
+
                 <div class="card card-default">
-                    <div class="card-body">
-                               
-                    </div>
-                </div>
-
-                <div class="form-group csv-import-file">
-
-                    
-                    <div class="card card-default">
                         <div class="card-body">
 
                             <div class="form-group row mb-0">
@@ -34,11 +28,14 @@
                                 <div class="col-md-6">
                                     <div class="input-group mb-0">
 
-                                          <div class="custom-file">
+                                          <div class="custom-file csv-import-file">
                                             
                                             <label class="custom-file-label form-control" for="inputGroupFile01">Choose file</label>
-                                            <input type="file" class="custom-file-input form-control" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" ref="csv"
-                                            type="file"
+                                            <input 
+                                            type="file" 
+                                            id="inputGroupFile01" 
+                                            aria-describedby="inputGroupFileAddon01" 
+                                            ref="csv"
                                             @change.prevent="validFileMimeType"
                                             class="custom-file-input file-select"
                                             name="csv">
@@ -58,14 +55,14 @@
                         </div>
                     </div>
 
-                 
-                </div>
 
                 <div class="form-group">
-                  
+                    <slot name="next" :load="load">
+                        <button type="submit" :disabled="disabledNextButton" :class="buttonClass" @click.prevent="load">
+                            {{ loadBtnText }}
+                        </button>
+                    </slot>
                 </div>
-
-
             </div>
             <div class="vue-csv-uploader-part-two">
                 <div class="vue-csv-mapping" v-if="sample">
@@ -270,11 +267,10 @@ export default {
             const mimeType = file.type === "" ? mimeTypes.lookup(file.name) : file.type;
 
             if (file) {
-
                 this.fileSelected = true;
                 this.isValidFileMimeType = this.validation ? this.validateMimeType(mimeType) : true;
                 this.load();
- 
+                console.log('attempt load');
             } else {
                 this.isValidFileMimeType = !this.validation;
                 this.fileSelected = false;
@@ -286,6 +282,8 @@ export default {
         load() {
             const _this = this;
 
+            console.log('log');
+            
             this.readFile((output) => {
                 _this.sample = get(Papa.parse(output, {preview: 2, skipEmptyLines: true}), "data");
                 _this.csv = get(Papa.parse(output, {skipEmptyLines: true}), "data");
