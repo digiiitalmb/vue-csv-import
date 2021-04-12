@@ -273,7 +273,7 @@ export default {
 
                 this.fileSelected = true;
                 this.isValidFileMimeType = this.validation ? this.validateMimeType(mimeType) : true;
-                this.load();
+                //this.load();
  
             } else {
                 this.isValidFileMimeType = !this.validation;
