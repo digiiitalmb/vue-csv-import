@@ -56,13 +56,7 @@
                     </div>
 
 
-                <div class="form-group">
-                    <slot name="next" :load="load">
-                        <button type="submit" :disabled="disabledNextButton" :class="buttonClass" @click.prevent="load">
-                            {{ loadBtnText }}
-                        </button>
-                    </slot>
-                </div>
+    
             </div>
             <div class="vue-csv-uploader-part-two">
                 <div class="vue-csv-mapping" v-if="sample">
