@@ -72,7 +72,7 @@
                             <tr v-for="(field, key) in fieldsToMap" :key="key">
                                 <td>{{ field.label }}</td>
                                 <td>
-                                    <select
+                                    <v-select
                                         :class="tableSelectClass"
                                         :name="`csv_uploader_map_${key}`"
                                         v-model="map[field.key]"
@@ -81,7 +81,7 @@
                                         <option v-for="(column, key) in firstRow" :key="key" :value="key">
                                             {{ column }}
                                         </option>
-                                    </select>
+                                    </v-select>
                                 </td>
                             </tr>
                         </tbody>
@@ -102,8 +102,12 @@ import {drop, every, forEach, get, isArray, map, set} from "lodash";
 import axios from "axios";
 import Papa from "papaparse";
 import mimeTypes from "mime-types";
+import vSelect from 'vue-select'
 
 export default {
+    components: {
+        'v-select':vSelect
+    },
     props: {
         value: Array,
         url: {
