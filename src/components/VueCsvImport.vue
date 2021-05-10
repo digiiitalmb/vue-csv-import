@@ -53,10 +53,9 @@
                             </slot>
 
                         </div>
-                    </div>
+                    </div> 
 
 
-    
             </div>
             <div class="vue-csv-uploader-part-two">
                 <div class="vue-csv-mapping" v-if="sample">
@@ -77,7 +76,7 @@
                                         :class="tableSelectClass"
                                         :name="`csv_uploader_map_${key}`"
                                         v-model="map[field.key]"
-                                    >
+                                    >w
                                         <option :value="null" v-if="canIgnore">Ignore</option>
                                         <option v-for="(column, key) in firstRow" :key="key" :value="key">
                                             {{ column }}
