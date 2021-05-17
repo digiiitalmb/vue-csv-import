@@ -74,13 +74,14 @@
                                 <td>
                                     <div class="py-1">
                                     <v-select
+                                        placeholder="Select column"
                                         :name="`csv_uploader_map_${key}`"
                                         v-model="map[field.key]"
-                                        :options="[{label: 'Canada', code: 'ca'}]"
+                                        :options="selectOptions"
                                     >                           
                                     </v-select>
                                     </div>
-                                </td>
+                                </td> 
                             </tr>
                         </tbody>
                     </table>
@@ -105,8 +106,25 @@ import {drop, every, forEach, get, isArray, map, set} from "lodash";
 import axios from "axios";
 import Papa from "papaparse";
 import mimeTypes from "mime-types";
-import vSelect from 'vue-select'
+import vSelect from 'vue-select';
 
+vSelect.props.components.default = () => ({
+  Deselect: {
+    render: createElement => createElement('i', {
+        class: {
+            'far fa-times mr-1':true
+        }
+    }),
+  },
+  OpenIndicator: {
+    render: createElement => createElement('i', {
+        class: {
+            'far fa-angle-down mr-0':true
+        }
+    }),
+  },
+});
+ 
 export default {
     components: { 
         'v-select':vSelect 
@@ -349,6 +367,13 @@ export default {
         },
     },
     computed: {
+        selectOptions() {
+
+            var options = get(this, "sample.0");
+            console.log(options);
+
+            return [{label: 'Canada', code: 'ca'}];
+        },
         firstRow() {
             return get(this, "sample.0");
         },
