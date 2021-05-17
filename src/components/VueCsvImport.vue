@@ -72,14 +72,15 @@
                             <tr v-for="(field, key) in fieldsToMap" :key="key">
                                 <td><a>{{ field.label }}</a></td>
                                 <td>
-                                    <span class="p-1">
+                                    <div class="py-1">
                                     <v-select
                                         :class="tableSelectClass"
                                         :name="`csv_uploader_map_${key}`"
                                         v-model="map[field.key]"
-                                    >                          
+                                        :options="[{label: 'Canada', code: 'ca'}]"
+                                    >                           
                                     </v-select>
-                                    </span>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
