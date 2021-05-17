@@ -74,7 +74,6 @@
                                 <td>
                                     <div class="py-1">
                                     <v-select
-                                        :class="tableSelectClass"
                                         :name="`csv_uploader_map_${key}`"
                                         v-model="map[field.key]"
                                         :options="[{label: 'Canada', code: 'ca'}]"
