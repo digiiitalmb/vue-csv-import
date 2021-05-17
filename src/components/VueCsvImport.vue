@@ -115,9 +115,6 @@ export default {
         mapFields: {
             required: true,
         },
-        mapFieldsLabels: {
-            required: true,
-        }, 
         callback: {
             type: Function,
             default: () => ({}),
