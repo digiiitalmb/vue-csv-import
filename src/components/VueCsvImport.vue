@@ -63,25 +63,23 @@
                         <slot name="thead">
                             <thead>
                                 <tr>
-                                    <th>Field</th>
-                                    <th>CSV Column</th>
+                                    <th><span class="small text-uppercase font-weight-bold text-muted">Field</span></th>
+                                    <th><span class="small text-uppercase font-weight-bold text-muted">CSV Column</span></th>
                                 </tr>
                             </thead>
                         </slot>
                         <tbody>
                             <tr v-for="(field, key) in fieldsToMap" :key="key">
-                                <td>{{ field.label }}</td>
+                                <td><a>{{ field.label }}</a></td>
                                 <td>
+                                    <span class="p-1">
                                     <v-select
                                         :class="tableSelectClass"
                                         :name="`csv_uploader_map_${key}`"
                                         v-model="map[field.key]"
-                                    >w
-                                        <option :value="null" v-if="canIgnore">Ignore</option>
-                                        <option v-for="(column, key) in firstRow" :key="key" :value="key">
-                                            {{ column }}
-                                        </option>
+                                    >                          
                                     </v-select>
+                                    </span>
                                 </td>
                             </tr>
                         </tbody>
@@ -96,18 +94,19 @@
         </div>
     </div>
 </template>
-
+<!--
+  <option :value="null" v-if="canIgnore">Ignore</option>
+                                        <option v-for="(column, key) in firstRow" :key="key" :value="key">
+                                            {{ column }}
+                                        </option>
+-->
 <script>
 import {drop, every, forEach, get, isArray, map, set} from "lodash";
 import axios from "axios";
 import Papa from "papaparse";
 import mimeTypes from "mime-types";
-import vSelect from 'vue-select'
 
 export default {
-    components: {
-        'v-select':vSelect
-    },
     props: {
         value: Array,
         url: {
@@ -116,6 +115,9 @@ export default {
         mapFields: {
             required: true,
         },
+        mapFieldsLabels: {
+            required: true,
+        }, 
         callback: {
             type: Function,
             default: () => ({}),
