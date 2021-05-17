@@ -270,6 +270,8 @@ export default {
 
             let csv = this.hasHeaders ? drop(this.csv) : this.csv;
 
+            console.log(this.map); 
+
             return map(csv, (row) => {
                 let newRow = {};
 
