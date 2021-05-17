@@ -106,8 +106,12 @@ import {drop, every, forEach, get, isArray, map, set} from "lodash";
 import axios from "axios";
 import Papa from "papaparse";
 import mimeTypes from "mime-types";
+import vSelect from 'vue-select'
 
 export default {
+    components: { 
+        'v-select':vSelect 
+    },
     props: {
         value: Array,
         url: {
