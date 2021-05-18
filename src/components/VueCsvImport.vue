@@ -249,6 +249,7 @@ export default {
             this.form.csv = this.buildMappedCsv();
             this.$emit("input", this.form.csv);
 
+            console.log('submit');
             console.log(this.form.csv);
 
             if (this.url) {
@@ -383,7 +384,7 @@ export default {
             var options = get(this, "sample.0");
 
             console.log(options);
-            
+
             return options;
         },
         firstRow() {
