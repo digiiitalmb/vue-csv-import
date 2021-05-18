@@ -249,6 +249,8 @@ export default {
             this.form.csv = this.buildMappedCsv();
             this.$emit("input", this.form.csv);
 
+            console.log(this.form.csv);
+
             if (this.url) {
                 axios
                     .post(this.url, this.form)
@@ -269,8 +271,6 @@ export default {
             const _this = this;
 
             let csv = this.hasHeaders ? drop(this.csv) : this.csv;
-
-            console.log(this.map); 
 
             return map(csv, (row) => {
                 let newRow = {};
@@ -336,13 +336,23 @@ export default {
                 if (!this.url) {
                     let hasAllKeys = Array.isArray(this.mapFields)
                         ? every(this.mapFields, function (item) {
+
+                            console.log('item');
+                            console.log(item);
+
                             return Object.prototype.hasOwnProperty.call(newVal, item);
                         })
                         : every(this.mapFields, function (item, key) {
+
+                            console.log('item');
+                            console.log(item);
+                            console.log('key');
+                            console.log(key); 
+
                             return Object.prototype.hasOwnProperty.call(newVal, key);
                         });
 
-                    if (hasAllKeys) {
+                    if (hasAllKeys) { 
                         this.submit();
                     }
                 }
