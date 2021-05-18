@@ -381,6 +381,9 @@ export default {
     computed: {
         selectOptions() {
             var options = get(this, "sample.0");
+
+            console.log(options);
+            
             return options;
         },
         firstRow() {
