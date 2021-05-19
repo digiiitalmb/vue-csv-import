@@ -77,7 +77,9 @@
                                         placeholder="Select column"
                                         :name="`csv_uploader_map_${key}`"
                                         v-model="map[field.key]"
-                                        :options="selectOptions"
+                                        label="columnName"
+                                        :reduce="option => option.index"
+                                        :options="selectOptions" 
                                     >                           
                                     </v-select>
                                     </div>
@@ -381,7 +383,12 @@ export default {
     },
     computed: {
         selectOptions() {
-            var options = get(this, "sample.0");
+            var optionsArray = get(this, "sample.0");
+            var options = [];
+            optionsArray.forEach((columnName, index) => {
+                options.push({"columnName": columnName, "index": index});
+            });
+
 
             console.log(options);
 
